@@ -1,0 +1,145 @@
+.searchForm {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.searchWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.searchInput {
+  padding: 10px 15px;
+  width: 300px;
+  max-width: 80vw;
+  border-radius: 10px;
+  border: 1px solid #00bfff;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+  box-shadow: 0 0 10px #00bfff;
+}
+
+.searchButton {
+  margin-left: 10px;
+  background-color: #00bfff;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20%;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchButton:hover {
+  background-color: #0088cc;
+  box-shadow: 0 0 15px #00bfff;
+}
+
+/* 🔽 قائمة الاقتراحات */
+.suggestions {
+  position: absolute;
+  top: 120%;
+  background-color: #373737;
+  right: 30%;
+  left: 24.5%;
+  width: 300px;
+  list-style-type: none;
+  border-radius: 12px;
+  border: 1px solid #00bfff40;
+  z-index: 20;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.suggestionItem {
+  padding: 10px 15px;
+  color: #eee;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.suggestionItem:hover {
+  background-color: #00bfff30;
+  color: #00bfff;
+}
+
+.activeSuggestion {
+  background-color: #00bfff60;
+  color: white;
+}
+
+.noSuggestions {
+  padding: 10px 15px;
+  color: #777;
+  text-align: center;
+  font-style: italic;
+}
+
+/* 🎬 تأثير بسيط */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 شاشات الموبايل */
+@media (max-width: 600px) {
+  .searchForm {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .searchInput {
+    width: 50vw;
+    font-size: 0.95rem;
+  }
+
+  .searchButton {
+    margin-left: 10px;
+    padding: 10px 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+
+  .suggestions {
+    top: 110%;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+  }
+
+  .suggestionItem {
+    font-size: 0.9rem;
+  }
+}
+
+/* 💻 تابلت */
+@media (max-width: 900px) and (min-width: 601px) {
+  .searchInput {
+    width: 70vw;
+  }
+
+  .suggestions {
+    width: 70%;
+    left: 15%;
+    right: 15%;
+  }
+}

@@ -1,0 +1,94 @@
+.resultCard {
+  margin-top: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #00bfff4f;
+  border-radius: 20px;
+  padding: 2rem;
+  color: #eee;
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.2);
+  transition: transform 0.3s ease;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.resultCard:hover {
+  transform: scale(1.02);
+}
+
+.resultImage {
+  width: 180px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.resultCard:hover .resultImage {
+  transform: rotate(3deg) scale(1.05);
+}
+
+.resultTitle {
+  font-size: 2rem;
+  color: #00bfff;
+  margin-bottom: 0.5rem;
+}
+
+.resultDesc {
+  color: #ccc;
+  margin-top: 0.5rem;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.infoList li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* 📱 موبايلات */
+@media (max-width: 600px) {
+  .resultCard {
+    padding: 1.2rem;
+    border-radius: 15px;
+  }
+
+  .resultImage {
+    width: 120px;
+  }
+
+  .resultTitle {
+    font-size: 1.5rem;
+  }
+
+  .resultDesc {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .infoList {
+    text-align: center;
+  }
+
+  .infoList li {
+    font-size: 0.9rem;
+  }
+}
+
+/* 💻 تابلت */
+@media (max-width: 900px) {
+  .resultImage {
+    width: 150px;
+  }
+
+  .resultTitle {
+    font-size: 1.8rem;
+  }
+}

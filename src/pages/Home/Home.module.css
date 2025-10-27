@@ -1,0 +1,131 @@
+.HomeSection {
+  height: 110vh;
+  background-color: black;
+  color: white;
+  font-family: "Cairo", sans-serif;
+}
+
+.containerHome {
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.title span {
+   color: rgba(2, 200, 240, 0.821);
+}
+
+.rowHome {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.leftHome {
+  width: 47.5%;
+  text-align: left;
+}
+
+.planetContainer {
+  width: 47.5%;
+}
+
+.planet {
+  width: 100%;
+}
+.WelcomeHome{
+    font-size: 2rem;
+  font-weight: 700;
+   
+}
+
+.buttonHome {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  color: #fff;
+  background-color: #00bfff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.buttonHome:hover {
+  background-color: #0088cc;
+  box-shadow: 0 0 15px #00bfff;
+}
+
+.buttonSpan{
+    color: #58b6e5;
+}
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .containerHome {
+    width: 90%;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .WelcomeHome {
+    font-size: 1.5rem;
+  }
+
+  .rowHome {
+    flex-direction: column; /* يخلي الكوكب تحت النص */
+    align-items: center;
+  }
+
+  .leftHome,
+  .planetContainer {
+    width: 100%;
+    text-align: center;
+  }
+
+  .planet {
+    width: 80%;
+    margin-top: 1.5rem;
+  }
+
+  .buttonHome {
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .WelcomeHome {
+    font-size: 1.3rem;
+  }
+
+  .planet {
+    width: 90%;
+  }
+}
